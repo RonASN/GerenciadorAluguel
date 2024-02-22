@@ -1,0 +1,1 @@
+docker-compose -p gerenciador-aluguel -f ./docker-compose.yml down -v
