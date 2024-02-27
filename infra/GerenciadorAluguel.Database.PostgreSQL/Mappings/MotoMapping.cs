@@ -28,8 +28,8 @@ public class MotoMapping : IEntityTypeConfiguration<Moto>
             .IsUnique();
 
         builder.HasOne(x => x.Usuario)
-            .WithOne(y => y.Moto)
-            .HasForeignKey<Moto>("idUsuario")
+            .WithMany(y => y.Moto)
+            .HasForeignKey("idUsuario")
             .IsRequired();
     }
 }

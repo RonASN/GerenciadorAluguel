@@ -3,6 +3,7 @@ using System;
 using GerenciadorAluguel.Database.PostgreSQL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GerenciadorAluguel.Database.PostgreSQL.Migrations
 {
     [DbContext(typeof(GerenciadorAluguelDbContext))]
-    partial class GerenciadorAluguelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240227223602_alterado_tamanho_propriedades_entregador")]
+    partial class alteradotamanhopropriedadesentregador
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

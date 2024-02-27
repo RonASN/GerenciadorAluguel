@@ -16,7 +16,11 @@ public class EntregadorMapping : IEntityTypeConfiguration<Entregador>
             .HasDefaultValueSql("gen_random_uuid()");
 
         builder.Property(x => x.Cnpj)
+            .HasMaxLength(14)
             .IsRequired();
+
+        builder.HasIndex(x => x.Cnpj)
+            .IsUnique();
 
         builder.Property(x => x.DataNascimento)
             .IsRequired();
@@ -25,7 +29,11 @@ public class EntregadorMapping : IEntityTypeConfiguration<Entregador>
             .IsRequired();
 
         builder.Property(x => x.NumeroCnh)
+            .HasMaxLength(9)
             .IsRequired();
+
+        builder.HasIndex(x => x.NumeroCnh)
+            .IsUnique();
 
         builder.Property(x => x.ImagemCnh)
             .IsRequired();

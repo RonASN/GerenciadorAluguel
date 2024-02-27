@@ -29,7 +29,7 @@ public class MotoService : IMotoService
             _logger.LogWarning($"Usuário '{usuario.Nome}' não tem permissão de administrador.");
             throw new Exception(mensagem);
         }
-        var moto = new Moto(dto.Ano, dto.Modelo, dto.Placa, usuario!);
+        var moto = new Moto(dto.Ano, dto.Modelo, dto.Placa);
         _context.Set<Moto>().Add(moto);
         await _context.SaveChangesAsync();
     }

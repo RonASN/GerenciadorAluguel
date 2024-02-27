@@ -29,9 +29,9 @@ public class UsuarioMapping : IEntityTypeConfiguration<Usuario>
                 .HasForeignKey<Entregador>("idUsuario")
                 .IsRequired(false);
 
-        builder.HasOne(x => x.Moto)
+        builder.HasMany(x => x.Moto)
                 .WithOne(y => y.Usuario)
-                .HasForeignKey<Moto>("idUsuario")
+                .HasForeignKey("idUsuario")
                 .IsRequired(false);
 
         builder.HasOne(x => x.Aluguel)

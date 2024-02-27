@@ -2,12 +2,11 @@
 
 public class Moto
 {
-    public Moto(int ano, string modelo, string placa, Usuario usuario)
+    public Moto(int ano, string modelo, string placa)
     {
         Ano = ano;
         Modelo = modelo;
         Placa = placa;
-        Usuario = usuario;
     }
 
     public Guid Id { get; protected set; }

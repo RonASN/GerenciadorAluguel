@@ -16,8 +16,8 @@ public class Usuario
     public string Email { get; protected set; }
     public UserRole Role { get; protected set; }
     public Entregador? DadosEntregador { get; protected set; }
-    public Moto? Moto { get; protected set; }
     public Aluguel? Aluguel { get; protected set; }
+    public IEnumerable<Moto>? Moto { get; protected set; }
     public IEnumerable<Pedido>? Pedidos { get; protected set; }
 
     public Usuario(){}

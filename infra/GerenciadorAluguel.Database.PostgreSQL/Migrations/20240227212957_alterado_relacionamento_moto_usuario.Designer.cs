@@ -3,6 +3,7 @@ using System;
 using GerenciadorAluguel.Database.PostgreSQL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GerenciadorAluguel.Database.PostgreSQL.Migrations
 {
     [DbContext(typeof(GerenciadorAluguelDbContext))]
-    partial class GerenciadorAluguelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240227212957_alterado_relacionamento_moto_usuario")]
+    partial class alteradorelacionamentomotousuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,8 +64,7 @@ namespace GerenciadorAluguel.Database.PostgreSQL.Migrations
 
                     b.Property<string>("Cnpj")
                         .IsRequired()
-                        .HasMaxLength(14)
-                        .HasColumnType("character varying(14)");
+                        .HasColumnType("text");
 
                     b.Property<string>("DataNascimento")
                         .IsRequired()
@@ -74,19 +76,12 @@ namespace GerenciadorAluguel.Database.PostgreSQL.Migrations
 
                     b.Property<string>("NumeroCnh")
                         .IsRequired()
-                        .HasMaxLength(9)
-                        .HasColumnType("character varying(9)");
+                        .HasColumnType("text");
 
                     b.Property<Guid?>("idUsuario")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Cnpj")
-                        .IsUnique();
-
-                    b.HasIndex("NumeroCnh")
-                        .IsUnique();
 
                     b.HasIndex("idUsuario")
                         .IsUnique();
