@@ -1,5 +1,5 @@
-FROM postgres:16,2
+FROM postgres:16.2
 
-COPY 0_init.sql /docker-entrypoint-initdb.d/0-init.sql
+COPY scripts/01_ddl_initial.sql /docker-entrypoint-initdb.d/01_ddl_initial.sql
 
 EXPOSE 5432
