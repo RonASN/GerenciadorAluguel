@@ -43,7 +43,7 @@ public class MotoController : ControllerBase
             return StatusCode(400, $"Erro ao buscar moto");
         }
     }
-    [HttpGet("editar")]
+    [HttpPut("editar")]
     public async Task<IActionResult> Put([FromQuery] Guid idMoto ,[FromQuery] Guid idUsuario, [FromQuery] string? placa)
     {
         try
@@ -57,12 +57,12 @@ public class MotoController : ControllerBase
         }
     }
     [HttpDelete("apagar")]
-    public async Task<IActionResult> Put([FromQuery] Guid idUsuario, [FromQuery] Guid idMoto)
+    public async Task<IActionResult> Delete([FromQuery] Guid idUsuario, [FromQuery] Guid idMoto)
     {
         try
         {
-            var resultado = await _motoService.ApagarMoto(idUsuario, idMoto);
-            return Ok(resultado);
+            await _motoService.ApagarMoto(idUsuario, idMoto);
+            return Ok();
         }
         catch (Exception ex)
         {
