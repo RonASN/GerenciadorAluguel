@@ -1,4 +1,6 @@
-﻿using GerenciadorAluguel.Database.PostgreSQL;
+﻿using GerenciadorAluguel.Application.Services;
+using GerenciadorAluguel.Application.ServicesInterfaces;
+using GerenciadorAluguel.Database.PostgreSQL;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aluguel.Api;
@@ -17,6 +19,8 @@ public class Startup
         services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
+        services.AddScoped<IUsuarioService, UsuarioService>();
+        services.AddScoped<IMotoService, MotoService>();
         services.AddDbContext<GerenciadorAluguelDbContext>(options =>
         options.UseNpgsql(Configuration.GetConnectionString("GerenciadorAluguelDbConnection")));
     }

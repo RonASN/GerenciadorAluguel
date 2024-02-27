@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\GerenciadorAluguel.Aplication\GerenciadorAluguel.Application.csproj" />
     <ProjectReference Include="..\..\infra\GerenciadorAluguel.Database.PostgreSQL\GerenciadorAluguel.Database.PostgreSQL.csproj" />
   </ItemGroup>
 

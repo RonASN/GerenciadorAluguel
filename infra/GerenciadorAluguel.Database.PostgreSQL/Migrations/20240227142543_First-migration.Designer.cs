@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GerenciadorAluguel.Database.PostgreSQL.Migrations
 {
     [DbContext(typeof(GerenciadorAluguelDbContext))]
-    [Migration("20240226024513_firstmigration")]
-    partial class firstmigration
+    [Migration("20240227142543_First-migration")]
+    partial class Firstmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -98,9 +98,6 @@ namespace GerenciadorAluguel.Database.PostgreSQL.Migrations
 
                     b.Property<int>("Ano")
                         .HasColumnType("integer");
-
-                    b.Property<Guid>("IdUsuario")
-                        .HasColumnType("uuid");
 
                     b.Property<string>("Modelo")
                         .IsRequired()

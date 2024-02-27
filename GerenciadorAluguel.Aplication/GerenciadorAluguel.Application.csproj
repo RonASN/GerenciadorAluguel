@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\domain\GerenciadorAluguel.Domain\GerenciadorAluguel.Domain.csproj" />
+    <ProjectReference Include="..\infra\GerenciadorAluguel.Database.PostgreSQL\GerenciadorAluguel.Database.PostgreSQL.csproj" />
+  </ItemGroup>
+
+</Project>

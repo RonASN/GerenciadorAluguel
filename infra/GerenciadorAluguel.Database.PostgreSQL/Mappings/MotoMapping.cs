@@ -24,9 +24,12 @@ public class MotoMapping : IEntityTypeConfiguration<Moto>
         builder.Property(x => x.Placa)
             .IsRequired();
 
+        builder.HasIndex(x => x.Placa)  
+            .IsUnique();
+
         builder.HasOne(x => x.Usuario)
             .WithOne(y => y.Moto)
-            .HasForeignKey<Moto>("IdUsuario")
+            .HasForeignKey<Moto>("idUsuario")
             .IsRequired();
     }
 }

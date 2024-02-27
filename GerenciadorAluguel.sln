@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GerenciadorAluguel.Domain",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GerenciadorAluguel.Database.PostgreSQL", "infra\GerenciadorAluguel.Database.PostgreSQL\GerenciadorAluguel.Database.PostgreSQL.csproj", "{EEBDBE12-ACF1-4C65-9FA6-3B9B2CA9F33D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GerenciadorAluguel.Application", "GerenciadorAluguel.Aplication\GerenciadorAluguel.Application.csproj", "{AFE1C7FA-27A6-4B21-8811-9FC5B8BF8C7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EEBDBE12-ACF1-4C65-9FA6-3B9B2CA9F33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEBDBE12-ACF1-4C65-9FA6-3B9B2CA9F33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEBDBE12-ACF1-4C65-9FA6-3B9B2CA9F33D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFE1C7FA-27A6-4B21-8811-9FC5B8BF8C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE1C7FA-27A6-4B21-8811-9FC5B8BF8C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFE1C7FA-27A6-4B21-8811-9FC5B8BF8C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFE1C7FA-27A6-4B21-8811-9FC5B8BF8C7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{75C3DEFA-39EB-44B7-A99C-1D7C61C92016} = {52FF1F47-E2C2-4CB2-8606-7042124F2374}
 		{98A4444A-F5E4-44B1-8239-B6A682AE8B18} = {C5D2C35E-DCFD-444F-BAC7-3607D31DC2C6}
 		{EEBDBE12-ACF1-4C65-9FA6-3B9B2CA9F33D} = {3DAE1E50-B36F-4A6B-B746-B9DAD99E22D2}
+		{AFE1C7FA-27A6-4B21-8811-9FC5B8BF8C7F} = {C5D2C35E-DCFD-444F-BAC7-3607D31DC2C6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {692C4C08-CC47-4284-8AB9-1CF31798EB7A}

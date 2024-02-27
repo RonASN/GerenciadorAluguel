@@ -9,6 +9,11 @@ public class GerenciadorAluguelDbContext : DbContext
     {
     }
 
+    public Task FirstOrDefault()
+    {
+        throw new NotImplementedException();
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(UsuarioMapping).Assembly);

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GerenciadorAluguel.Database.PostgreSQL.Migrations
 {
     /// <inheritdoc />
-    public partial class firstmigration : Migration
+    public partial class Firstmigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -76,8 +76,7 @@ namespace GerenciadorAluguel.Database.PostgreSQL.Migrations
                     Ano = table.Column<int>(type: "integer", nullable: false),
                     Modelo = table.Column<string>(type: "text", nullable: false),
                     Placa = table.Column<string>(type: "text", nullable: false),
-                    idUsuario = table.Column<Guid>(type: "uuid", nullable: true),
-                    IdUsuario = table.Column<Guid>(type: "uuid", nullable: false)
+                    idUsuario = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
                 {

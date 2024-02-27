@@ -43,7 +43,6 @@ CREATE TABLE "Moto" (
     "Modelo" text NOT NULL,
     "Placa" text NOT NULL,
     "idUsuario" uuid NULL,
-    "IdUsuario" uuid NOT NULL,
     CONSTRAINT "PK_Moto" PRIMARY KEY ("Id"),
     CONSTRAINT "FK_Moto_Usuario_idUsuario" FOREIGN KEY ("idUsuario") REFERENCES "Usuario" ("Id")
 );
@@ -67,7 +66,7 @@ CREATE UNIQUE INDEX "IX_Moto_idUsuario" ON "Moto" ("idUsuario");
 CREATE INDEX "IX_Pedido_idUsuario" ON "Pedido" ("idUsuario");
 
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
-VALUES ('20240226024513_firstmigration', '7.0.0');
+VALUES ('20240227142543_First-migration', '7.0.0');
 
 COMMIT;
 

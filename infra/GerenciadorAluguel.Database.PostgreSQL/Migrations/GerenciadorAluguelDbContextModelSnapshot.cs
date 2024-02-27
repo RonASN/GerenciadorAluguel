@@ -96,9 +96,6 @@ namespace GerenciadorAluguel.Database.PostgreSQL.Migrations
                     b.Property<int>("Ano")
                         .HasColumnType("integer");
 
-                    b.Property<Guid>("IdUsuario")
-                        .HasColumnType("uuid");
-
                     b.Property<string>("Modelo")
                         .IsRequired()
                         .HasColumnType("text");
